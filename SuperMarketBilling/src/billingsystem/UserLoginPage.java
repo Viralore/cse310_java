@@ -14,7 +14,7 @@ public UserLoginPage() {
     btn_Cancel.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            System.exit(0);
         }
     });
 
