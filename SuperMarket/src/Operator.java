@@ -1,10 +1,35 @@
-public class ItemData
+import java.util.*;
+
+class Admin
+{
+    String name,user_name, password,mob_no;
+}
+
+class ItemData
 {
     String[][] list1 = new String[3][15];
+}
 
+public class Operator
+{
+    String name,address, user_name,password,mob_no;
+
+    Operator(String name,String address, String user_name, String password, String mob_no)
+    {
+        this.name = name;
+        this.address = address;
+        this. user_name = user_name;
+        this.password = password;
+        this.mob_no = mob_no;
+    }
 
     public static void main(String[] args)
     {
+        Scanner in = new Scanner(System.in);
+        Operator user1 = new Operator("Abhishek","Punjab","itz_abhi", "abhi#123", "9461012345");
+        Operator user2 = new Operator("Gopal","Hyderabad","gopal_mittal_01", "gopal@245", "9765212345");
+        Operator user3 = new Operator("Yogendra","Rajasthan","yogendra_58558", "yogendra#58558", "9636912345");
+
         ItemData List_1 = new ItemData();
         List_1.list1[0][0] = "12";
         List_1.list1[0][1] = "15";
@@ -53,5 +78,14 @@ public class ItemData
         List_1.list1[2][12] = "300";
         List_1.list1[2][13] = "350";
         List_1.list1[2][14] = "1450";
+
+        String user,pass;
+
+        int attempt = 3;
+        while(attempt!=0)
+        {
+            user = in.nextLine();
+            pass = in.nextLine();
+        }
     }
 }
