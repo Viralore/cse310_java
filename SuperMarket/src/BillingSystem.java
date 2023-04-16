@@ -1,4 +1,5 @@
 import java.util.*;
+import java.time.*;
 
 class Admin
 {
@@ -233,6 +234,101 @@ public class BillingSystem
         }
     }
 
+    public static String getItemNameOthers(ItemData li,int x)
+    {
+        String str = "";
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Other[0][i])==x)
+                str = li.item_list_Other[1][i];
+        }
+        return str;
+    }
+
+    public static String getItemNameGrocery(ItemData li,int x)
+    {
+        String str = "";
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Grocery[0][i])==x)
+                str = li.item_list_Grocery[1][i];
+        }
+        return str;
+    }
+
+    public static String getItemNameVeg(ItemData li,int x)
+    {
+        String str = "";
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Veg[0][i])==x)
+                str = li.item_list_Veg[1][i];
+        }
+        return str;
+    }
+
+    public static String getItemNameFruits(ItemData li,int x)
+    {
+        String str = "";
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Fruit[0][i])==x)
+                str = li.item_list_Fruit[1][i];
+        }
+        return str;
+    }
+
+    public static void printBill_Items(ItemData li,int[] other_code,int[] other_quantity,int[] grocery_code,int[] grocery_quantity,int[] veg_code,int[] veg_quantity,int[] fruits_code,int[] fruits_quantity)
+    {
+        System.out.println("\t Item Name \t\t\t\t Price \t\t\t Total");
+        for(int i=0;i<other_code.length;i++)
+        {
+            System.out.print(getItemNameOthers(li,other_code[i])+"\t\t\t\t "+other_quantity[i]+"*"+getOtherPrice(li,other_code[i])+"\t\t\t"+getOtherPrice(li,other_code[i])*other_quantity[i]);
+            System.out.println();
+        }
+
+        for(int i=0;i<grocery_code.length;i++)
+        {
+            System.out.print(getItemNameGrocery(li,grocery_code[i])+"\t\t\t\t "+grocery_quantity[i]+"*"+getGroceryPrice(li,grocery_code[i])+"\t\t\t"+getGroceryPrice(li,grocery_code[i])*grocery_quantity[i]);
+            System.out.println();
+        }
+
+        for(int i=0;i<veg_code.length;i++)
+        {
+            System.out.print(getItemNameVeg(li,veg_code[i])+"\t\t\t\t "+veg_quantity[i]+"*"+getVegPrice(li,veg_code[i])+"\t\t\t"+getVegPrice(li,veg_code[i])*veg_quantity[i]);
+            System.out.println();
+        }
+
+        for(int i=0;i<fruits_code.length;i++)
+        {
+            System.out.print(getItemNameFruits(li,fruits_code[i])+"\t\t\t\t "+fruits_quantity[i]+"*"+getFruitsPrice(li,fruits_code[i])+"\t\t\t"+getFruitsPrice(li,fruits_code[i])*fruits_quantity[i]);
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printBill_Total(int tot)
+    {
+        int gst = tot*18/100;
+        System.out.println("Amount               : "+tot);
+        System.out.println("GST 18%              : "+ gst);
+        System.out.println("Total Payable Amount : "+ (tot+gst));
+    }
+
+    public static void printBill_Details(String name,String mob_no)
+    {
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+        int hours = time.getHour();
+        int minutes = time.getMinute();
+        int seconds = time.getSecond();
+        System.out.print("Name of Customer        : "+name);
+        System.out.println("\t\t\t\tDate : "+date);
+        System.out.print("Mobile no of Customer   : "+mob_no);
+        System.out.println("\t\t\tTime : "+hours+":"+minutes+":"+seconds);
+        System.out.println();
+    }
+
 
     public static void main(String[] args)
     {
@@ -442,8 +538,32 @@ public class BillingSystem
         operators[2] = new Operator("Yogendra", "Rajasthan", "yogendra_58558", "yogendra#58558", "9636912345");
 
         int attempt_admin = 3, attempt_op = 3;
+        int[] a1 = {12,13};
+        int[] a2 = {1,1};
+        int a3 = 1;
+        int a = billOthers(list,a3,a1,a2);
 
+        int[] b1 = {32};
+        int[] b2 = {1};
+        int b3 = 1;
+        int b = billGrocery(list,b3,b1,b2);
 
+        int[] c1 = {61};
+        int[] c2 = {1};
+        int c3 = 1;
+        int c = billVeg(list,c3,c1,c2);
+
+        int[] d1 = {91};
+        int[] d2 = {1};
+        int d3 = 1;
+        int d = billFruits(list,d3,d1,d2);
+        int e = a+b+c+d;
+        System.out.println(e);
+        printBill_Details("Abhishek","9876543210");
+        printBill_Items(list,a1,a2,b1,b2,c1,c2,d1,d2);
+        printBill_Total(e);
+
+/*
         Exit:
         while(true)
         {
@@ -649,6 +769,6 @@ public class BillingSystem
                     System.out.println("Exiting Super Market Billing System");
                     break Exit;
             }
-        }
+        }*/
     }
 }
