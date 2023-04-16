@@ -77,6 +77,162 @@ public class BillingSystem
         return false;
     }
 
+    public static void printItemListOther(ItemData li)
+    {
+        System.out.println("Item Code \t\t\t Item Name");
+        for(int i=0;i<15;i++)
+        {
+            System.out.print("\t"+li.item_list_Other[0][i]);
+            System.out.print("\t\t\t\t" + li.item_list_Other[1][i]);
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printItemListGrocery(ItemData li)
+    {
+        System.out.println("Item Code \t\t\t Item Name");
+        for(int i=0;i<15;i++)
+        {
+            System.out.print("\t"+li.item_list_Grocery[0][i]);
+            System.out.print("\t\t\t\t" + li.item_list_Grocery[1][i]);
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printItemListVeg(ItemData li)
+    {
+        System.out.println("Item Code \t\t\t Item Name");
+        for(int i=0;i<15;i++)
+        {
+            System.out.print("\t"+li.item_list_Veg[0][i]);
+            System.out.print("\t\t\t\t" + li.item_list_Veg[1][i]);
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printItemListFruit(ItemData li)
+    {
+        System.out.println("Item Code \t\t\t Item Name");
+        for(int i=0;i<15;i++)
+        {
+            System.out.print("\t"+li.item_list_Fruit[0][i]);
+            System.out.print("\t\t\t\t" + li.item_list_Fruit[1][i]);
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static int getOtherPrice(ItemData li,int x)
+    {
+        int price = 0;
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Other[0][i])==x)
+                price = Integer.parseInt(li.item_list_Other[2][i]);
+        }
+        return price;
+    }
+
+    public static int billOthers(ItemData li,int number,int[] arr_item_code,int[] arr_item_quantity)
+    {
+        if(number==0) return 0;
+        else
+        {
+            int sum = 0;
+            for(int i=0;i<number;i++)
+            {
+                int temp = getOtherPrice(li,arr_item_code[i]);
+                temp = temp * arr_item_quantity[i];
+                sum = sum+temp;
+            }
+            return sum;
+        }
+    }
+
+    public static int getGroceryPrice(ItemData li,int x)
+    {
+        int price = 0;
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Grocery[0][i])==x)
+                price = Integer.parseInt(li.item_list_Grocery[2][i]);
+        }
+        return price;
+    }
+
+    public static int billGrocery(ItemData li,int number,int[] arr_item_code,int[] arr_item_quantity)
+    {
+        if(number==0) return 0;
+        else
+        {
+            int sum = 0;
+            for(int i=0;i<number;i++)
+            {
+                int temp = getGroceryPrice(li,arr_item_code[i]);
+                temp = temp * arr_item_quantity[i];
+                sum = sum+temp;
+            }
+            return sum;
+        }
+    }
+
+    public static int getVegPrice(ItemData li,int x)
+    {
+        int price = 0;
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Veg[0][i])==x)
+                price = Integer.parseInt(li.item_list_Veg[2][i]);
+        }
+        return price;
+    }
+
+    public static int billVeg(ItemData li,int number,int[] arr_item_code,int[] arr_item_quantity)
+    {
+        if(number==0) return 0;
+        else
+        {
+            int sum = 0;
+            for(int i=0;i<number;i++)
+            {
+                int temp = getVegPrice(li,arr_item_code[i]);
+                temp = temp * arr_item_quantity[i];
+                sum = sum+temp;
+            }
+            return sum;
+        }
+    }
+
+    public static int getFruitsPrice(ItemData li,int x)
+    {
+        int price = 0;
+        for(int i=0;i<15;i++)
+        {
+            if(Integer.parseInt(li.item_list_Fruit[0][i])==x)
+                price = Integer.parseInt(li.item_list_Fruit[2][i]);
+        }
+        return price;
+    }
+
+    public static int billFruits(ItemData li,int number,int[] arr_item_code,int[] arr_item_quantity)
+    {
+        if(number==0) return 0;
+        else
+        {
+            int sum = 0;
+            for(int i=0;i<number;i++)
+            {
+                int temp = getFruitsPrice(li,arr_item_code[i]);
+                temp = temp * arr_item_quantity[i];
+                sum = sum+temp;
+            }
+            return sum;
+        }
+    }
+
 
     public static void main(String[] args)
     {
@@ -101,16 +257,16 @@ public class BillingSystem
         list.item_list_Other[0][14] = "3";
 
         list.item_list_Other[1][0] = "Jaggery (1 Kg)";
-        list.item_list_Other[1][1] = "Organic Honey (250 mL)";
+        list.item_list_Other[1][1] = "Honey (250 mL)";
         list.item_list_Other[1][2] = "Almonds (1 Kg)";
         list.item_list_Other[1][3] = "Cashew (1 Kg)";
         list.item_list_Other[1][4] = "Raisins (1 Kg)";
         list.item_list_Other[1][5] = "Walnuts (1 Kg)";
-        list.item_list_Other[1][6] = "Tomato Ketchup (1 Kg)";
+        list.item_list_Other[1][6] = "Ketchup (1 Kg)";
         list.item_list_Other[1][7] = "Noodles (1 Kg)";
         list.item_list_Other[1][8] = "Pasta (1 Kg)";
         list.item_list_Other[1][9] = "Marconi (1 Kg)";
-        list.item_list_Other[1][10] = "Health Drinks(Child) (1 Kg)";
+        list.item_list_Other[1][10] = "Health Drinks (1 Kg)";
         list.item_list_Other[1][11] = "Papad (250 gms)";
         list.item_list_Other[1][12] = "Fruit Jam (1 Kg)";
         list.item_list_Other[1][13] = "Peanut Butter (500 gms)";
@@ -161,9 +317,9 @@ public class BillingSystem
         list.item_list_Grocery[1][9]="Mustard Seeds (100 g)";
         list.item_list_Grocery[1][10]="Salt (1 kg)";
         list.item_list_Grocery[1][11]="Groundnut Oil (1 L)";
-        list.item_list_Grocery[1][12]="Flour/Atta (1 kg)";
-        list.item_list_Grocery[1][13]="Besan/chickpeas flour (1 kg)";
-        list.item_list_Grocery[1][14]="Maize flour/makki aata (500 g)";
+        list.item_list_Grocery[1][12]="Aata (1 kg)";
+        list.item_list_Grocery[1][13]="Besan (1 kg)";
+        list.item_list_Grocery[1][14]="Makkai aata (500 g)";
 
         list.item_list_Grocery[2][0]="300";
         list.item_list_Grocery[2][1]="1000";
@@ -198,12 +354,12 @@ public class BillingSystem
         list.item_list_Veg[0][13]="87";
         list.item_list_Veg[0][14]="90";
 
-        list.item_list_Veg[1][0]=" Green Chillies (250 g)";
+        list.item_list_Veg[1][0]="Green Chillies (250 g)";
         list.item_list_Veg[1][1]="Cauliflower (1 piece)";
         list.item_list_Veg[1][2]="Red Onions (1 kg)";
         list.item_list_Veg[1][3]="Green Peas (500 g)";
         list.item_list_Veg[1][4]="Carrots (500 g)";
-        list.item_list_Veg[1][5]=" Tomatoes (1 kg)";
+        list.item_list_Veg[1][5]="Tomatoes (1 kg)";
         list.item_list_Veg[1][6]="Coriander Leaves (100 g)";
         list.item_list_Veg[1][7]="Iceberg Lettuce (1 piece)";
         list.item_list_Veg[1][8]="Sweet Potatoes (1 kg)";
@@ -247,7 +403,7 @@ public class BillingSystem
         list.item_list_Fruit[0][13]="117";
         list.item_list_Fruit[0][14]="120";
 
-        list.item_list_Fruit[1][0]=" Apple (1 kg)";
+        list.item_list_Fruit[1][0]="Apple (1 kg)";
         list.item_list_Fruit[1][1]="Strawberries (500 g)";
         list.item_list_Fruit[1][2]="Pineapple (1 piece)";
         list.item_list_Fruit[1][3]="Grapes (1 kg)";
@@ -286,6 +442,7 @@ public class BillingSystem
         operators[2] = new Operator("Yogendra", "Rajasthan", "yogendra_58558", "yogendra#58558", "9636912345");
 
         int attempt_admin = 3, attempt_op = 3;
+
 
         Exit:
         while(true)
@@ -355,6 +512,8 @@ public class BillingSystem
                                         }
                                     }
                                     createOperator(operators,arguments,temp);
+                                    System.out.println("Operator created");
+                                    break Exit_Admin;
                                 default:
                                     System.out.println("Exiting Admin panel");
                                     break Exit_Admin;
@@ -380,7 +539,102 @@ public class BillingSystem
                         pass1 = in.nextLine();
                         if(checkOperator(operators,usr1,pass1))
                         {
-                            System.out.println("Hello");
+                            System.out.println("Enter 1 for create Bill");
+                            System.out.println("Enter 2 to exit");
+                            int choice_3 = in.nextInt();
+                            in.nextLine();
+                            if(choice_3==1)
+                            {
+                                System.out.print("Please enter the name of the customer : ");
+                                String name_cust = in.nextLine();
+                                System.out.print("Please enter the Mobile no. of the customer : ");
+                                String mob_no_cust = in.nextLine();
+                                int bill=0;
+                                printItemListOther(list);
+                                System.out.print("Please enter items purchased in this list : ");
+                                int items_other = in.nextInt();
+                                int[] items_arr_others = new int[items_other];
+                                int[] items_arr_others_quantity = new int[items_other];
+                                if(items_other!=0)
+                                {
+                                    System.out.println("Please enter item codes of purchased items");
+                                    for (int i = 0; i < items_other; i++) {
+                                        items_arr_others[i] = in.nextInt();
+                                    }
+
+                                    System.out.println("Please enter quantity of purchased items");
+                                    for (int i = 0; i < items_other; i++) {
+                                        items_arr_others_quantity[i] = in.nextInt();
+                                    }
+                                }
+                                bill = bill + billOthers(list,items_other,items_arr_others,items_arr_others_quantity);
+
+                                printItemListGrocery(list);
+                                System.out.print("Please enter items purchased in this list : ");
+                                int items_grocery = in.nextInt();
+                                int[] items_arr_grocery = new int[items_grocery];
+                                int[] items_arr_grocery_quantity = new int[items_grocery];
+                                if(items_grocery!=0)
+                                {
+                                    System.out.println("Please enter item codes of purchased items");
+                                    for (int i = 0; i < items_grocery; i++) {
+                                        items_arr_grocery[i] = in.nextInt();
+                                    }
+                                    System.out.println("Please enter quantity of purchased items");
+                                    for (int i = 0; i < items_grocery; i++) {
+                                        items_arr_grocery_quantity[i] = in.nextInt();
+                                    }
+                                }
+                                bill = bill + billGrocery(list,items_grocery,items_arr_grocery,items_arr_grocery_quantity);
+
+                                printItemListVeg(list);
+                                System.out.print("Please enter items purchased in this list : ");
+                                int items_veg = in.nextInt();
+                                int[] items_arr_veg = new int[items_veg];
+                                int[] items_arr_veg_quantity = new int[items_veg];
+                                if(items_veg!=0)
+                                {
+                                    System.out.println("Please enter item codes of purchased items");
+                                    for (int i = 0; i < items_veg; i++) {
+                                        items_arr_veg[i] = in.nextInt();
+                                    }
+
+                                    System.out.println("Please enter quantity of purchased items");
+
+                                    for (int i = 0; i < items_veg; i++) {
+                                        items_arr_veg_quantity[i] = in.nextInt();
+                                    }
+                                }
+                                bill = bill + billVeg(list,items_veg,items_arr_veg,items_arr_veg_quantity);
+
+                                printItemListFruit(list);
+                                System.out.print("Please enter items purchased in this list : ");
+                                int items_fruits = in.nextInt();
+                                int[] items_arr_fruits = new int[items_fruits];
+                                int[] items_arr_fruits_quantity = new int[items_fruits];
+                                if(items_fruits!=0)
+                                {
+                                    System.out.println("Please enter item codes of purchased items");
+                                    for (int i = 0; i < items_fruits; i++) {
+                                        items_arr_fruits[i] = in.nextInt();
+                                    }
+
+                                    System.out.println("Please enter quantity of purchased items");
+                                    for (int i = 0; i < items_fruits; i++) {
+                                        items_arr_fruits_quantity[i] = in.nextInt();
+                                    }
+                                }
+                                bill = bill + billFruits(list,items_fruits,items_arr_fruits,items_arr_fruits_quantity);
+
+                                System.out.println(bill);
+
+                                break Exit_Operator;
+
+                            }
+                            else
+                            {
+                                break Exit;
+                            }
                         }
                         else
                         {
