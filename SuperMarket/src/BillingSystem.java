@@ -44,21 +44,6 @@ class Operator
         operator_count--;
     }
 
-    Operator()
-    {
-        //Null
-    }
-
-    public static boolean checkOperator(Operator[] ar, String user_name,String password)
-    {
-        for (Operator operator : ar) {
-            if (operator.user_name.equals(user_name) && operator.user_name.equals(password)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 }
 
 public class BillingSystem
@@ -72,6 +57,26 @@ public class BillingSystem
     {
         ar[idx] = new Operator(arr[0],arr[1],arr[2],arr[3],arr[4]);
     }
+
+    public static boolean checkOperator(Operator[] ar, String user_name,String password)
+    {
+        int temp=0;
+        for(int i=0;i<ar.length;i++)
+        {
+            if(ar[i]!=null) temp++;
+            else break;
+        }
+
+        for (int i=0;i<temp;i++)
+        {
+            if (ar[i].user_name.equals(user_name) && ar[i].password.equals(password))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public static void main(String[] args)
     {
@@ -285,10 +290,9 @@ public class BillingSystem
         Exit:
         while(true)
         {
-            Exit_1:
-            System.out.println("\tEnter 1 for Admin");
-            System.out.println("\tEnter 2 for Operator");
-            System.out.print("\tEnter 3 to exit");
+            System.out.println("Enter 1 for Admin");
+            System.out.println("Enter 2 for Operator");
+            System.out.println("Enter 3 to exit");
             int choice_1 = in.nextInt();
             in.nextLine();
             switch(choice_1)
@@ -306,14 +310,16 @@ public class BillingSystem
                         {
                             System.out.println("Enter 1 for Admin Details");
                             System.out.println("Enter 2 for create new Operator");
+                            System.out.println("Enter 3 to exit");
                             int choice_2 = in.nextInt();
                             in.nextLine();
-                            switch (choice_2) {
+                            switch (choice_2)
+                            {
                                 case 1:
                                     admin.printDetails();
                                     break Exit_Admin;
                                 case 2:
-                                    int temp = -1;
+                                    int temp = 0;
                                     for (int i = 0; i < operators.length; i++)
                                     {
                                         if (operators[i] != null) temp++;
@@ -349,11 +355,39 @@ public class BillingSystem
                                         }
                                     }
                                     createOperator(operators,arguments,temp);
+                                default:
+                                    System.out.println("Exiting Admin panel");
+                                    break Exit_Admin;
                             }
                         }
                         else
                         {
                             attempt_admin--;
+                            System.out.println("Invalid Username or Password");
+                            System.out.println("Please re-enter Username and Password");
+                            System.out.println("Attempts remaining : "+attempt_admin);
+                        }
+                    }
+                    break Exit;
+                case 2:
+                    Exit_Operator:
+                    while (attempt_op!=0)
+                    {
+                        String usr1, pass1;
+                        System.out.print("Please enter Username : ");
+                        usr1 = in.nextLine();
+                        System.out.print("Please enter Password : ");
+                        pass1 = in.nextLine();
+                        if(checkOperator(operators,usr1,pass1))
+                        {
+                            System.out.println("Hello");
+                        }
+                        else
+                        {
+                            attempt_op--;
+                            System.out.println("Invalid Username or Password");
+                            System.out.println("Please re-enter Username and Password");
+                            System.out.println("Attempts remaining : "+attempt_op);
                         }
                     }
                     break Exit;
