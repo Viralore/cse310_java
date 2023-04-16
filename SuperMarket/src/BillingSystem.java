@@ -627,6 +627,7 @@ public class BillingSystem
         operators[2] = new Operator("Yogendra", "Rajasthan", "yogendra_58558", "yogendra#58558", "9636912345");
 
         int attempt_admin = 3, attempt_op = 3;
+        /* For Testing
         int[] a1 = {12,13};
         int[] a2 = {1,1};
         int a3 = 1;
@@ -651,8 +652,8 @@ public class BillingSystem
         printBill_Details(operators,"Abhishek","9876543210","itz_abhi","abhi#123");
         printBill_Items(list,a1,a2,b1,b2,c1,c2,d1,d2);
         printBill_Total(e);
+        */
 
-/*
         Exit:
         while(true)
         {
@@ -860,6 +861,6 @@ public class BillingSystem
                     System.out.println("Exiting Super Market Billing System");
                     break Exit;
             }
-        }*/
+        }
     }
 }
