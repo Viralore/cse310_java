@@ -1,5 +1,6 @@
 import java.util.*;
 import java.time.*;
+import java.util.Calendar;
 
 class Admin
 {
@@ -76,6 +77,26 @@ public class BillingSystem
             }
         }
         return false;
+    }
+
+    public static String getOperatorName(Operator[] ar,String username,String password)
+    {
+        String str = "";
+        int temp=0;
+        for(int i=0;i<ar.length;i++)
+        {
+            if(ar[i]!=null) temp++;
+            else break;
+        }
+        for (int i=0;i<temp;i++)
+        {
+            if (ar[i].user_name.equals(username) && ar[i].password.equals(password))
+            {
+                str = ar[i].name;
+            }
+        }
+
+        return str;
     }
 
     public static void printItemListOther(ItemData li)
@@ -280,7 +301,9 @@ public class BillingSystem
 
     public static void printBill_Items(ItemData li,int[] other_code,int[] other_quantity,int[] grocery_code,int[] grocery_quantity,int[] veg_code,int[] veg_quantity,int[] fruits_code,int[] fruits_quantity)
     {
+        System.out.println("========================================================================");
         System.out.println("\t Item Name \t\t\t\t Price \t\t\t Total");
+        System.out.println("========================================================================");
         for(int i=0;i<other_code.length;i++)
         {
             System.out.print(getItemNameOthers(li,other_code[i])+"\t\t\t\t "+other_quantity[i]+"*"+getOtherPrice(li,other_code[i])+"\t\t\t"+getOtherPrice(li,other_code[i])*other_quantity[i]);
@@ -304,29 +327,54 @@ public class BillingSystem
             System.out.print(getItemNameFruits(li,fruits_code[i])+"\t\t\t\t "+fruits_quantity[i]+"*"+getFruitsPrice(li,fruits_code[i])+"\t\t\t"+getFruitsPrice(li,fruits_code[i])*fruits_quantity[i]);
             System.out.println();
         }
-        System.out.println();
+        System.out.println("========================================================================");
     }
 
     public static void printBill_Total(int tot)
     {
         int gst = tot*18/100;
+        System.out.println("========================================================================");
         System.out.println("Amount               : "+tot);
         System.out.println("GST 18%              : "+ gst);
         System.out.println("Total Payable Amount : "+ (tot+gst));
+        System.out.println("========================================================================");
+        System.out.println("\t\tThank You for Being Our Valued Customer.");
+        System.out.println("========================================================================");
+        System.out.println("\t\tPlease visit us again.");
+        System.out.println("========================================================================");
     }
 
-    public static void printBill_Details(String name,String mob_no)
+    public static void printBill_Details(Operator[] array,String name,String mob_no,String username,String password)
     {
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
         int hours = time.getHour();
         int minutes = time.getMinute();
         int seconds = time.getSecond();
+        Calendar cal = Calendar.getInstance();
+        String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        int invoice_min = 1000000;
+        int invoice_max = 9999999;
+        int invoice = (int)(Math.random()*(invoice_max-invoice_min-1)+invoice_min);
+
+        int bill_min = 100000;
+        int bill_max = 999999;
+        int bill_no = (int)(Math.random()*(bill_max-bill_min-1)+bill_min);
+
+        System.out.println("========================================================================");
+        System.out.println("\t\tWelcome to Lovely Super Mall");
+        System.out.println("========================================================================");
+        System.out.print("INVOICE NO.          : "+invoice);
+        System.out.println("\t\t\t BILL NO. : "+bill_no);
+
         System.out.print("Name of Customer        : "+name);
         System.out.println("\t\t\t\tDate : "+date);
         System.out.print("Mobile no of Customer   : "+mob_no);
         System.out.println("\t\t\tTime : "+hours+":"+minutes+":"+seconds);
+        System.out.print("Name of the Operator    : "+getOperatorName(array,username,password));
+        System.out.print("\t\t\t\tDay  : "+days[cal.get(Calendar.DAY_OF_WEEK)-1]);
         System.out.println();
+        System.out.println("========================================================================");
     }
 
 
@@ -559,7 +607,7 @@ public class BillingSystem
         int d = billFruits(list,d3,d1,d2);
         int e = a+b+c+d;
         System.out.println(e);
-        printBill_Details("Abhishek","9876543210");
+        printBill_Details(operators,"Abhishek","9876543210","yogendra_58558","yogendra#58558");
         printBill_Items(list,a1,a2,b1,b2,c1,c2,d1,d2);
         printBill_Total(e);
 
@@ -746,7 +794,9 @@ public class BillingSystem
                                 }
                                 bill = bill + billFruits(list,items_fruits,items_arr_fruits,items_arr_fruits_quantity);
 
-                                System.out.println(bill);
+                                printBill_Details(operators,name_cust,mob_no_cust,usr1,pass1);
+                                printBill_Items(list,items_arr_others,items_arr_others_quantity,items_arr_grocery,items_arr_grocery_quantity,items_arr_veg,items_arr_veg_quantity,items_arr_fruits,items_arr_fruits_quantity);
+                                printBill_Total(bill);
 
                                 break Exit_Operator;
 
