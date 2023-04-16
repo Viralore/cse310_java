@@ -333,15 +333,55 @@ public class BillingSystem
     public static void printBill_Total(int tot)
     {
         int gst = tot*18/100;
+        Calendar cal = Calendar.getInstance();
+        String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        String current_day = days[cal.get(Calendar.DAY_OF_WEEK)-1];
+        int discount = 0;
+        int discount_rate;
+        switch(current_day)
+        {
+            case "Sunday":
+                discount_rate = 10;
+                discount = 10*(tot+gst)/100;
+                break;
+            case "Monday":
+                discount_rate = 15;
+                discount = 15*(tot+gst)/100;
+                break;
+            case "Tuesday":
+                discount_rate = 17;
+                discount = 17*(tot+gst)/100;
+                break;
+            case "Wednesday":
+                discount_rate = 25;
+                discount = 25*(tot+gst)/100;
+                break;
+            case "Thursday":
+                discount_rate = 20;
+                discount = 20*(tot+gst)/100;
+                break;
+            case "Friday":
+                discount_rate = 50;
+                discount = 50*(tot+gst)/100;
+                break;
+            default:
+                discount_rate = 19;
+                discount = 19*(tot+gst)/100;
+                break;
+        }
+
         System.out.println("========================================================================");
-        System.out.println("Amount               : "+tot);
-        System.out.println("GST 18%              : "+ gst);
-        System.out.println("Total Payable Amount : "+ (tot+gst));
+        System.out.println("Amount               : "+tot+"/-");
+        System.out.println("GST 18%              : "+ gst+"/-");
+        System.out.println("Grand Total          : "+(gst+tot)+"/-");
+        System.out.println("Discount("+discount_rate+"%)        : "+discount+"/-");
+        System.out.println("Total Payable Amount : "+ (tot+gst-discount)+"/-");
         System.out.println("========================================================================");
-        System.out.println("\t\tThank You for Being Our Valued Customer.");
+        System.out.println("\t\t\t\tThank You for Being Our Valued Customer.");
         System.out.println("========================================================================");
-        System.out.println("\t\tPlease visit us again.");
+        System.out.println("\t\t\t\t\t\tPlease visit us again.");
         System.out.println("========================================================================");
+        System.out.println("\t\t\t\tPlease Note: Discount differ with each day.");
     }
 
     public static void printBill_Details(Operator[] array,String name,String mob_no,String username,String password)
@@ -362,10 +402,11 @@ public class BillingSystem
         int bill_no = (int)(Math.random()*(bill_max-bill_min-1)+bill_min);
 
         System.out.println("========================================================================");
-        System.out.println("\t\tWelcome to Lovely Super Mall");
+        System.out.println("\t\t\t\t\tWelcome to Lovely Super Mall");
         System.out.println("========================================================================");
-        System.out.print("INVOICE NO.          : "+invoice);
-        System.out.println("\t\t\t BILL NO. : "+bill_no);
+        System.out.print("INVOICE NO.             : "+invoice);
+        System.out.println("\t\t\tBILL NO. : "+bill_no);
+        System.out.println("========================================================================");
 
         System.out.print("Name of Customer        : "+name);
         System.out.println("\t\t\t\tDate : "+date);
@@ -607,7 +648,7 @@ public class BillingSystem
         int d = billFruits(list,d3,d1,d2);
         int e = a+b+c+d;
         System.out.println(e);
-        printBill_Details(operators,"Abhishek","9876543210","yogendra_58558","yogendra#58558");
+        printBill_Details(operators,"Abhishek","9876543210","itz_abhi","abhi#123");
         printBill_Items(list,a1,a2,b1,b2,c1,c2,d1,d2);
         printBill_Total(e);
 
