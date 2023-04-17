@@ -627,7 +627,7 @@ public class BillingSystem
         operators[2] = new Operator("Yogendra", "Rajasthan", "yogendra_58558", "yogendra#58558", "9636912345");
 
         int attempt_admin = 3, attempt_op = 3;
-        /* For Testing
+        /*// For Testing
         int[] a1 = {12,13};
         int[] a2 = {1,1};
         int a3 = 1;
@@ -649,7 +649,7 @@ public class BillingSystem
         int d = billFruits(list,d3,d1,d2);
         int e = a+b+c+d;
         System.out.println(e);
-        printBill_Details(operators,"Abhishek","9876543210","itz_abhi","abhi#123");
+        printBill_Details(operators,"Amrinder Ma'am","9876543210","itz_abhi","abhi#123");
         printBill_Items(list,a1,a2,b1,b2,c1,c2,d1,d2);
         printBill_Total(e);
         */
@@ -691,7 +691,7 @@ public class BillingSystem
                                     {
                                         if (operators[i] != null) temp++;
                                     }
-                                    System.out.println(temp);
+                                    //System.out.println(temp);
                                     String[] arguments = new String[5];
                                     for(int i=0;i<5;i++)
                                     {
