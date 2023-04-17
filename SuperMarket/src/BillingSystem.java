@@ -419,8 +419,7 @@ public class BillingSystem
     }
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         ItemData list = new ItemData();
@@ -474,153 +473,153 @@ public class BillingSystem
         list.item_list_Other[2][14] = "1450";
 
         //Grocery items
-        list.item_list_Grocery[0][0]="32";
-        list.item_list_Grocery[0][1]="33";
-        list.item_list_Grocery[0][2]="34";
-        list.item_list_Grocery[0][3]="36";
-        list.item_list_Grocery[0][4]="38";
-        list.item_list_Grocery[0][5]="41";
-        list.item_list_Grocery[0][6]="44";
-        list.item_list_Grocery[0][7]="47";
-        list.item_list_Grocery[0][8]="49";
-        list.item_list_Grocery[0][9]="51";
-        list.item_list_Grocery[0][10]="52";
-        list.item_list_Grocery[0][11]="55";
-        list.item_list_Grocery[0][12]="56";
-        list.item_list_Grocery[0][13]="58";
-        list.item_list_Grocery[0][14]="60";
+        list.item_list_Grocery[0][0] = "32";
+        list.item_list_Grocery[0][1] = "33";
+        list.item_list_Grocery[0][2] = "34";
+        list.item_list_Grocery[0][3] = "36";
+        list.item_list_Grocery[0][4] = "38";
+        list.item_list_Grocery[0][5] = "41";
+        list.item_list_Grocery[0][6] = "44";
+        list.item_list_Grocery[0][7] = "47";
+        list.item_list_Grocery[0][8] = "49";
+        list.item_list_Grocery[0][9] = "51";
+        list.item_list_Grocery[0][10] = "52";
+        list.item_list_Grocery[0][11] = "55";
+        list.item_list_Grocery[0][12] = "56";
+        list.item_list_Grocery[0][13] = "58";
+        list.item_list_Grocery[0][14] = "60";
 
-        list.item_list_Grocery[1][0]="Basmati Rice (1 kg)";
-        list.item_list_Grocery[1][1]="Whole Wheat Flour (5 kg)";
-        list.item_list_Grocery[1][2]="Brown Sugar (500 g)";
-        list.item_list_Grocery[1][3]="Ground Cumin (100 g)";
-        list.item_list_Grocery[1][4]="Turmeric Powder (100g )";
-        list.item_list_Grocery[1][5]="Fennel Seeds (100 g)";
-        list.item_list_Grocery[1][6]="Maida Flour (1 kg)";
-        list.item_list_Grocery[1][7]="Refined Oil (1 L)";
-        list.item_list_Grocery[1][8]="Red Chilli Powder (100 g)";
-        list.item_list_Grocery[1][9]="Mustard Seeds (100 g)";
-        list.item_list_Grocery[1][10]="Salt (1 kg)";
-        list.item_list_Grocery[1][11]="Groundnut Oil (1 L)";
-        list.item_list_Grocery[1][12]="Aata (1 kg)";
-        list.item_list_Grocery[1][13]="Besan (1 kg)";
-        list.item_list_Grocery[1][14]="Makkai aata (500 g)";
+        list.item_list_Grocery[1][0] = "Basmati Rice (1 kg)";
+        list.item_list_Grocery[1][1] = "Whole Wheat Flour (5 kg)";
+        list.item_list_Grocery[1][2] = "Brown Sugar (500 g)";
+        list.item_list_Grocery[1][3] = "Ground Cumin (100 g)";
+        list.item_list_Grocery[1][4] = "Turmeric Powder (100g )";
+        list.item_list_Grocery[1][5] = "Fennel Seeds (100 g)";
+        list.item_list_Grocery[1][6] = "Maida Flour (1 kg)";
+        list.item_list_Grocery[1][7] = "Refined Oil (1 L)";
+        list.item_list_Grocery[1][8] = "Red Chilli Powder (100 g)";
+        list.item_list_Grocery[1][9] = "Mustard Seeds (100 g)";
+        list.item_list_Grocery[1][10] = "Salt (1 kg)";
+        list.item_list_Grocery[1][11] = "Groundnut Oil (1 L)";
+        list.item_list_Grocery[1][12] = "Aata (1 kg)";
+        list.item_list_Grocery[1][13] = "Besan (1 kg)";
+        list.item_list_Grocery[1][14] = "Makkai aata (500 g)";
 
-        list.item_list_Grocery[2][0]="300";
-        list.item_list_Grocery[2][1]="1000";
-        list.item_list_Grocery[2][2]="150";
-        list.item_list_Grocery[2][3]="50";
-        list.item_list_Grocery[2][4]="120";
-        list.item_list_Grocery[2][5]="60";
-        list.item_list_Grocery[2][6]="135";
-        list.item_list_Grocery[2][7]="700";
-        list.item_list_Grocery[2][8]="450";
-        list.item_list_Grocery[2][9]="150";
-        list.item_list_Grocery[2][10]="20";
-        list.item_list_Grocery[2][11]="200";
-        list.item_list_Grocery[2][12]="300";
-        list.item_list_Grocery[2][13]="55";
-        list.item_list_Grocery[2][14]="140";
+        list.item_list_Grocery[2][0] = "300";
+        list.item_list_Grocery[2][1] = "1000";
+        list.item_list_Grocery[2][2] = "150";
+        list.item_list_Grocery[2][3] = "50";
+        list.item_list_Grocery[2][4] = "120";
+        list.item_list_Grocery[2][5] = "60";
+        list.item_list_Grocery[2][6] = "135";
+        list.item_list_Grocery[2][7] = "700";
+        list.item_list_Grocery[2][8] = "450";
+        list.item_list_Grocery[2][9] = "150";
+        list.item_list_Grocery[2][10] = "20";
+        list.item_list_Grocery[2][11] = "200";
+        list.item_list_Grocery[2][12] = "300";
+        list.item_list_Grocery[2][13] = "55";
+        list.item_list_Grocery[2][14] = "140";
 
         //Vegetables list
-        list.item_list_Veg[0][0]="61";
-        list.item_list_Veg[0][1]="63";
-        list.item_list_Veg[0][2]="64";
-        list.item_list_Veg[0][3]="65";
-        list.item_list_Veg[0][4]="67";
-        list.item_list_Veg[0][5]="71";
-        list.item_list_Veg[0][6]="75";
-        list.item_list_Veg[0][7]="76";
-        list.item_list_Veg[0][8]="77";
-        list.item_list_Veg[0][9]="79";
-        list.item_list_Veg[0][10]="81";
-        list.item_list_Veg[0][11]="82";
-        list.item_list_Veg[0][12]="85";
-        list.item_list_Veg[0][13]="87";
-        list.item_list_Veg[0][14]="90";
+        list.item_list_Veg[0][0] = "61";
+        list.item_list_Veg[0][1] = "63";
+        list.item_list_Veg[0][2] = "64";
+        list.item_list_Veg[0][3] = "65";
+        list.item_list_Veg[0][4] = "67";
+        list.item_list_Veg[0][5] = "71";
+        list.item_list_Veg[0][6] = "75";
+        list.item_list_Veg[0][7] = "76";
+        list.item_list_Veg[0][8] = "77";
+        list.item_list_Veg[0][9] = "79";
+        list.item_list_Veg[0][10] = "81";
+        list.item_list_Veg[0][11] = "82";
+        list.item_list_Veg[0][12] = "85";
+        list.item_list_Veg[0][13] = "87";
+        list.item_list_Veg[0][14] = "90";
 
-        list.item_list_Veg[1][0]="Green Chillies (250 g)";
-        list.item_list_Veg[1][1]="Cauliflower (1 piece)";
-        list.item_list_Veg[1][2]="Red Onions (1 kg)";
-        list.item_list_Veg[1][3]="Green Peas (500 g)";
-        list.item_list_Veg[1][4]="Carrots (500 g)";
-        list.item_list_Veg[1][5]="Tomatoes (1 kg)";
-        list.item_list_Veg[1][6]="Coriander Leaves (100 g)";
-        list.item_list_Veg[1][7]="Iceberg Lettuce (1 piece)";
-        list.item_list_Veg[1][8]="Sweet Potatoes (1 kg)";
-        list.item_list_Veg[1][9]="Green Beans (500 g)";
-        list.item_list_Veg[1][10]="Lemons (500 g)";
-        list.item_list_Veg[1][11]="Cucumber (1 piece)";
-        list.item_list_Veg[1][12]="Corn (1 piece)";
-        list.item_list_Veg[1][13]="Drumsticks (1 kg)";
-        list.item_list_Veg[1][14]="Mushroom (500 g)";
+        list.item_list_Veg[1][0] = "Green Chillies (250 g)";
+        list.item_list_Veg[1][1] = "Cauliflower (1 piece)";
+        list.item_list_Veg[1][2] = "Red Onions (1 kg)";
+        list.item_list_Veg[1][3] = "Green Peas (500 g)";
+        list.item_list_Veg[1][4] = "Carrots (500 g)";
+        list.item_list_Veg[1][5] = "Tomatoes (1 kg)";
+        list.item_list_Veg[1][6] = "Coriander Leaves (100 g)";
+        list.item_list_Veg[1][7] = "Iceberg Lettuce (1 piece)";
+        list.item_list_Veg[1][8] = "Sweet Potatoes (1 kg)";
+        list.item_list_Veg[1][9] = "Green Beans (500 g)";
+        list.item_list_Veg[1][10] = "Lemons (500 g)";
+        list.item_list_Veg[1][11] = "Cucumber (1 piece)";
+        list.item_list_Veg[1][12] = "Corn (1 piece)";
+        list.item_list_Veg[1][13] = "Drumsticks (1 kg)";
+        list.item_list_Veg[1][14] = "Mushroom (500 g)";
 
-        list.item_list_Veg[2][0]="100";
-        list.item_list_Veg[2][1]="250";
-        list.item_list_Veg[2][2]="550";
-        list.item_list_Veg[2][3]="130";
-        list.item_list_Veg[2][4]="80";
-        list.item_list_Veg[2][5]="300";
-        list.item_list_Veg[2][6]="135";
-        list.item_list_Veg[2][7]="700";
-        list.item_list_Veg[2][8]="450";
-        list.item_list_Veg[2][9]="345";
-        list.item_list_Veg[2][10]="100";
-        list.item_list_Veg[2][11]="200";
-        list.item_list_Veg[2][12]="300";
-        list.item_list_Veg[2][13]="130";
-        list.item_list_Veg[2][14]="240";
+        list.item_list_Veg[2][0] = "100";
+        list.item_list_Veg[2][1] = "250";
+        list.item_list_Veg[2][2] = "550";
+        list.item_list_Veg[2][3] = "130";
+        list.item_list_Veg[2][4] = "80";
+        list.item_list_Veg[2][5] = "300";
+        list.item_list_Veg[2][6] = "135";
+        list.item_list_Veg[2][7] = "700";
+        list.item_list_Veg[2][8] = "450";
+        list.item_list_Veg[2][9] = "345";
+        list.item_list_Veg[2][10] = "100";
+        list.item_list_Veg[2][11] = "200";
+        list.item_list_Veg[2][12] = "300";
+        list.item_list_Veg[2][13] = "130";
+        list.item_list_Veg[2][14] = "240";
 
         //Fruit list
-        list.item_list_Fruit[0][0]="91";
-        list.item_list_Fruit[0][1]="93";
-        list.item_list_Fruit[0][2]="94";
-        list.item_list_Fruit[0][3]="95";
-        list.item_list_Fruit[0][4]="97";
-        list.item_list_Fruit[0][5]="101";
-        list.item_list_Fruit[0][6]="105";
-        list.item_list_Fruit[0][7]="106";
-        list.item_list_Fruit[0][8]="107";
-        list.item_list_Fruit[0][9]="109";
-        list.item_list_Fruit[0][10]="111";
-        list.item_list_Fruit[0][11]="112";
-        list.item_list_Fruit[0][12]="115";
-        list.item_list_Fruit[0][13]="117";
-        list.item_list_Fruit[0][14]="120";
+        list.item_list_Fruit[0][0] = "91";
+        list.item_list_Fruit[0][1] = "93";
+        list.item_list_Fruit[0][2] = "94";
+        list.item_list_Fruit[0][3] = "95";
+        list.item_list_Fruit[0][4] = "97";
+        list.item_list_Fruit[0][5] = "101";
+        list.item_list_Fruit[0][6] = "105";
+        list.item_list_Fruit[0][7] = "106";
+        list.item_list_Fruit[0][8] = "107";
+        list.item_list_Fruit[0][9] = "109";
+        list.item_list_Fruit[0][10] = "111";
+        list.item_list_Fruit[0][11] = "112";
+        list.item_list_Fruit[0][12] = "115";
+        list.item_list_Fruit[0][13] = "117";
+        list.item_list_Fruit[0][14] = "120";
 
-        list.item_list_Fruit[1][0]="Apple (1 kg)";
-        list.item_list_Fruit[1][1]="Strawberries (500 g)";
-        list.item_list_Fruit[1][2]="Pineapple (1 piece)";
-        list.item_list_Fruit[1][3]="Grapes (1 kg)";
-        list.item_list_Fruit[1][4]="Mango (1 kg)";
-        list.item_list_Fruit[1][5]="Banana (1 Dozen)";
-        list.item_list_Fruit[1][6]="Orange (1 kg)";
-        list.item_list_Fruit[1][7]="Pomegranate (1 kg)";
-        list.item_list_Fruit[1][8]="Watermelon (1 piece)";
-        list.item_list_Fruit[1][9]="Kiwi (500 g)";
-        list.item_list_Fruit[1][10]="Cherry (500 g)";
-        list.item_list_Fruit[1][11]="Mangosteen (1 kg)";
-        list.item_list_Fruit[1][12]="Dragonfruit (1 piece)";
-        list.item_list_Fruit[1][13]="Avocados (1 kg)";
-        list.item_list_Fruit[1][14]="papaya (1 piece)";
+        list.item_list_Fruit[1][0] = "Apple (1 kg)";
+        list.item_list_Fruit[1][1] = "Strawberries (500 g)";
+        list.item_list_Fruit[1][2] = "Pineapple (1 piece)";
+        list.item_list_Fruit[1][3] = "Grapes (1 kg)";
+        list.item_list_Fruit[1][4] = "Mango (1 kg)";
+        list.item_list_Fruit[1][5] = "Banana (1 Dozen)";
+        list.item_list_Fruit[1][6] = "Orange (1 kg)";
+        list.item_list_Fruit[1][7] = "Pomegranate (1 kg)";
+        list.item_list_Fruit[1][8] = "Watermelon (1 piece)";
+        list.item_list_Fruit[1][9] = "Kiwi (500 g)";
+        list.item_list_Fruit[1][10] = "Cherry (500 g)";
+        list.item_list_Fruit[1][11] = "Mangosteen (1 kg)";
+        list.item_list_Fruit[1][12] = "Dragonfruit (1 piece)";
+        list.item_list_Fruit[1][13] = "Avocados (1 kg)";
+        list.item_list_Fruit[1][14] = "papaya (1 piece)";
 
-        list.item_list_Fruit[2][0]="100";
-        list.item_list_Fruit[2][1]="450";
-        list.item_list_Fruit[2][2]="150";
-        list.item_list_Fruit[2][3]="130";
-        list.item_list_Fruit[2][4]="350";
-        list.item_list_Fruit[2][5]="300";
-        list.item_list_Fruit[2][6]="250";
-        list.item_list_Fruit[2][7]="300";
-        list.item_list_Fruit[2][8]="450";
-        list.item_list_Fruit[2][9]="345";
-        list.item_list_Fruit[2][10]="1000";
-        list.item_list_Fruit[2][11]="500";
-        list.item_list_Fruit[2][12]="300";
-        list.item_list_Fruit[2][13]="230";
-        list.item_list_Fruit[2][14]="240";
+        list.item_list_Fruit[2][0] = "100";
+        list.item_list_Fruit[2][1] = "450";
+        list.item_list_Fruit[2][2] = "150";
+        list.item_list_Fruit[2][3] = "130";
+        list.item_list_Fruit[2][4] = "350";
+        list.item_list_Fruit[2][5] = "300";
+        list.item_list_Fruit[2][6] = "250";
+        list.item_list_Fruit[2][7] = "300";
+        list.item_list_Fruit[2][8] = "450";
+        list.item_list_Fruit[2][9] = "345";
+        list.item_list_Fruit[2][10] = "1000";
+        list.item_list_Fruit[2][11] = "500";
+        list.item_list_Fruit[2][12] = "300";
+        list.item_list_Fruit[2][13] = "230";
+        list.item_list_Fruit[2][14] = "240";
 
-        Admin admin = new Admin("Admin","admin","admin#123","9876543210");
+        Admin admin = new Admin("Admin", "admin", "admin#123", "9876543210");
         Operator[] operators = new Operator[10];
         operators[0] = new Operator("Abhishek", "Punjab", "itz_abhi", "abhi#123", "9461012345");
         operators[1] = new Operator("Gopal", "Hyderabad", "gopal_mittal_01", "gopal@245", "9765212345");
@@ -654,212 +653,189 @@ public class BillingSystem
         printBill_Total(e);
         */
 
-        Exit:
-        while(true)
+        EXIT_Main:
+        while (true)
         {
-            System.out.println("Enter 1 for Admin");
-            System.out.println("Enter 2 for Operator");
-            System.out.println("Enter 3 to exit");
-            int choice_1 = in.nextInt();
-            in.nextLine();
-            switch(choice_1)
-            {
-                case 1:
-                    Exit_Admin:
-                    while(attempt_admin!=0)
-                    {
-                        String usr, pass;
-                        System.out.print("Please enter Username : ");
-                        usr = in.nextLine();
-                        System.out.print("Please enter Password : ");
-                        pass = in.nextLine();
-                        if (checkAdmin(admin, usr, pass))
-                        {
-                            System.out.println("Enter 1 for Admin Details");
-                            System.out.println("Enter 2 for create new Operator");
-                            System.out.println("Enter 3 to exit");
-                            int choice_2 = in.nextInt();
-                            in.nextLine();
-                            switch (choice_2)
-                            {
-                                case 1:
-                                    admin.printDetails();
-                                    break Exit_Admin;
-                                case 2:
-                                    int temp = 0;
-                                    for (int i = 0; i < operators.length; i++)
-                                    {
-                                        if (operators[i] != null) temp++;
-                                    }
-                                    //System.out.println(temp);
-                                    String[] arguments = new String[5];
-                                    for(int i=0;i<5;i++)
-                                    {
-                                        if(i==0)
-                                        {
-                                            System.out.print("Enter the name of Operator : ");
-                                            arguments[i] = in.nextLine();
+            Exit:
+            while (true) {
+                System.out.println("Enter 1 for Admin");
+                System.out.println("Enter 2 for Operator");
+                System.out.println("Enter 3 to exit");
+                int choice_1 = in.nextInt();
+                in.nextLine();
+                switch (choice_1) {
+                    case 1:
+                        Exit_Admin:
+                        while (attempt_admin != 0) {
+                            String usr, pass;
+                            System.out.print("Please enter Username : ");
+                            usr = in.nextLine();
+                            System.out.print("Please enter Password : ");
+                            pass = in.nextLine();
+                            if (checkAdmin(admin, usr, pass)) {
+                                System.out.println("Enter 1 for Admin Details");
+                                System.out.println("Enter 2 for create new Operator");
+                                System.out.println("Enter 3 to exit");
+                                int choice_2 = in.nextInt();
+                                in.nextLine();
+                                switch (choice_2) {
+                                    case 1:
+                                        admin.printDetails();
+                                        break Exit_Admin;
+                                    case 2:
+                                        int temp = 0;
+                                        for (int i = 0; i < operators.length; i++) {
+                                            if (operators[i] != null) temp++;
                                         }
-                                        else if(i==1)
-                                        {
-                                            System.out.print("Enter the address : ");
-                                            arguments[i] = in.nextLine();
+
+                                        String[] arguments = new String[5];
+                                        for (int i = 0; i < 5; i++) {
+                                            if (i == 0) {
+                                                System.out.print("Enter the name of Operator : ");
+                                                arguments[i] = in.nextLine();
+                                            } else if (i == 1) {
+                                                System.out.print("Enter the address : ");
+                                                arguments[i] = in.nextLine();
+                                            } else if (i == 2) {
+                                                System.out.print("Enter the Username : ");
+                                                arguments[i] = in.nextLine();
+                                            } else if (i == 3) {
+                                                System.out.print("Enter the Password : ");
+                                                arguments[i] = in.nextLine();
+                                            } else {
+                                                System.out.print("Enter the Mobile no. : ");
+                                                arguments[i] = in.nextLine();
+                                            }
                                         }
-                                        else if(i==2)
-                                        {
-                                            System.out.print("Enter the Username : ");
-                                            arguments[i] = in.nextLine();
-                                        }
-                                        else if(i==3)
-                                        {
-                                            System.out.print("Enter the Password : ");
-                                            arguments[i] = in.nextLine();
-                                        }
-                                        else
-                                        {
-                                            System.out.print("Enter the Mobile no. : ");
-                                            arguments[i] = in.nextLine();
-                                        }
-                                    }
-                                    createOperator(operators,arguments,temp);
-                                    System.out.println("Operator created");
-                                    break Exit_Admin;
-                                default:
-                                    System.out.println("Exiting Admin panel");
-                                    break Exit_Admin;
+                                        createOperator(operators, arguments, temp);
+                                        System.out.println("Operator created");
+                                        break Exit_Admin;
+                                    default:
+                                        System.out.println("Exiting Admin panel");
+                                        break Exit_Admin;
+                                }
+                            } else {
+                                attempt_admin--;
+                                System.out.println("Invalid Username or Password");
+                                System.out.println("Please re-enter Username and Password");
+                                System.out.println("Attempts remaining : " + attempt_admin);
                             }
                         }
-                        else
-                        {
-                            attempt_admin--;
-                            System.out.println("Invalid Username or Password");
-                            System.out.println("Please re-enter Username and Password");
-                            System.out.println("Attempts remaining : "+attempt_admin);
-                        }
-                    }
-                    break Exit;
-                case 2:
-                    Exit_Operator:
-                    while (attempt_op!=0)
-                    {
-                        String usr1, pass1;
-                        System.out.print("Please enter Username : ");
-                        usr1 = in.nextLine();
-                        System.out.print("Please enter Password : ");
-                        pass1 = in.nextLine();
-                        if(checkOperator(operators,usr1,pass1))
-                        {
-                            System.out.println("Enter 1 for create Bill");
-                            System.out.println("Enter 2 to exit");
-                            int choice_3 = in.nextInt();
-                            in.nextLine();
-                            if(choice_3==1)
-                            {
-                                System.out.print("Please enter the name of the customer : ");
-                                String name_cust = in.nextLine();
-                                System.out.print("Please enter the Mobile no. of the customer : ");
-                                String mob_no_cust = in.nextLine();
-                                int bill=0;
-                                printItemListOther(list);
-                                System.out.print("Please enter items purchased in this list : ");
-                                int items_other = in.nextInt();
-                                int[] items_arr_others = new int[items_other];
-                                int[] items_arr_others_quantity = new int[items_other];
-                                if(items_other!=0)
+                        break Exit;
+                    case 2:
+                        Exit_Operator:
+                        while (attempt_op != 0) {
+                            String usr1, pass1;
+                            System.out.print("Please enter Username : ");
+                            usr1 = in.nextLine();
+                            System.out.print("Please enter Password : ");
+                            pass1 = in.nextLine();
+                            if (checkOperator(operators, usr1, pass1)) {
+                                System.out.println("Enter 1 for create Bill");
+                                System.out.println("Enter 2 to exit");
+                                int choice_3 = in.nextInt();
+                                in.nextLine();
+                                if (choice_3 == 1) {
+                                    System.out.print("Please enter the name of the customer : ");
+                                    String name_cust = in.nextLine();
+                                    System.out.print("Please enter the Mobile no. of the customer : ");
+                                    String mob_no_cust = in.nextLine();
+                                    int bill = 0;
+                                    printItemListOther(list);
+                                    System.out.print("Please enter items purchased in this list : ");
+                                    int items_other = in.nextInt();
+                                    int[] items_arr_others = new int[items_other];
+                                    int[] items_arr_others_quantity = new int[items_other];
+                                    if (items_other != 0) {
+                                        System.out.println("Please enter item codes of purchased items");
+                                        for (int i = 0; i < items_other; i++) {
+                                            items_arr_others[i] = in.nextInt();
+                                        }
+
+                                        System.out.println("Please enter quantity of purchased items");
+                                        for (int i = 0; i < items_other; i++) {
+                                            items_arr_others_quantity[i] = in.nextInt();
+                                        }
+                                    }
+                                    bill = bill + billOthers(list, items_other, items_arr_others, items_arr_others_quantity);
+
+                                    printItemListGrocery(list);
+                                    System.out.print("Please enter items purchased in this list : ");
+                                    int items_grocery = in.nextInt();
+                                    int[] items_arr_grocery = new int[items_grocery];
+                                    int[] items_arr_grocery_quantity = new int[items_grocery];
+                                    if (items_grocery != 0) {
+                                        System.out.println("Please enter item codes of purchased items");
+                                        for (int i = 0; i < items_grocery; i++) {
+                                            items_arr_grocery[i] = in.nextInt();
+                                        }
+                                        System.out.println("Please enter quantity of purchased items");
+                                        for (int i = 0; i < items_grocery; i++) {
+                                            items_arr_grocery_quantity[i] = in.nextInt();
+                                        }
+                                    }
+                                    bill = bill + billGrocery(list, items_grocery, items_arr_grocery, items_arr_grocery_quantity);
+
+                                    printItemListVeg(list);
+                                    System.out.print("Please enter items purchased in this list : ");
+                                    int items_veg = in.nextInt();
+                                    int[] items_arr_veg = new int[items_veg];
+                                    int[] items_arr_veg_quantity = new int[items_veg];
+                                    if (items_veg != 0) {
+                                        System.out.println("Please enter item codes of purchased items");
+                                        for (int i = 0; i < items_veg; i++) {
+                                            items_arr_veg[i] = in.nextInt();
+                                        }
+
+                                        System.out.println("Please enter quantity of purchased items");
+
+                                        for (int i = 0; i < items_veg; i++) {
+                                            items_arr_veg_quantity[i] = in.nextInt();
+                                        }
+                                    }
+                                    bill = bill + billVeg(list, items_veg, items_arr_veg, items_arr_veg_quantity);
+
+                                    printItemListFruit(list);
+                                    System.out.print("Please enter items purchased in this list : ");
+                                    int items_fruits = in.nextInt();
+                                    int[] items_arr_fruits = new int[items_fruits];
+                                    int[] items_arr_fruits_quantity = new int[items_fruits];
+                                    if (items_fruits != 0) {
+                                        System.out.println("Please enter item codes of purchased items");
+                                        for (int i = 0; i < items_fruits; i++) {
+                                            items_arr_fruits[i] = in.nextInt();
+                                        }
+
+                                        System.out.println("Please enter quantity of purchased items");
+                                        for (int i = 0; i < items_fruits; i++) {
+                                            items_arr_fruits_quantity[i] = in.nextInt();
+                                        }
+                                    }
+                                    bill = bill + billFruits(list, items_fruits, items_arr_fruits, items_arr_fruits_quantity);
+
+                                    printBill_Details(operators, name_cust, mob_no_cust, usr1, pass1);
+                                    printBill_Items(list, items_arr_others, items_arr_others_quantity, items_arr_grocery, items_arr_grocery_quantity, items_arr_veg, items_arr_veg_quantity, items_arr_fruits, items_arr_fruits_quantity);
+                                    printBill_Total(bill);
+
+                                    break Exit_Operator;
+
+                                } else
                                 {
-                                    System.out.println("Please enter item codes of purchased items");
-                                    for (int i = 0; i < items_other; i++) {
-                                        items_arr_others[i] = in.nextInt();
-                                    }
-
-                                    System.out.println("Please enter quantity of purchased items");
-                                    for (int i = 0; i < items_other; i++) {
-                                        items_arr_others_quantity[i] = in.nextInt();
-                                    }
+                                    System.out.println("Exiting User Panel");
+                                    break Exit;
                                 }
-                                bill = bill + billOthers(list,items_other,items_arr_others,items_arr_others_quantity);
-
-                                printItemListGrocery(list);
-                                System.out.print("Please enter items purchased in this list : ");
-                                int items_grocery = in.nextInt();
-                                int[] items_arr_grocery = new int[items_grocery];
-                                int[] items_arr_grocery_quantity = new int[items_grocery];
-                                if(items_grocery!=0)
-                                {
-                                    System.out.println("Please enter item codes of purchased items");
-                                    for (int i = 0; i < items_grocery; i++) {
-                                        items_arr_grocery[i] = in.nextInt();
-                                    }
-                                    System.out.println("Please enter quantity of purchased items");
-                                    for (int i = 0; i < items_grocery; i++) {
-                                        items_arr_grocery_quantity[i] = in.nextInt();
-                                    }
-                                }
-                                bill = bill + billGrocery(list,items_grocery,items_arr_grocery,items_arr_grocery_quantity);
-
-                                printItemListVeg(list);
-                                System.out.print("Please enter items purchased in this list : ");
-                                int items_veg = in.nextInt();
-                                int[] items_arr_veg = new int[items_veg];
-                                int[] items_arr_veg_quantity = new int[items_veg];
-                                if(items_veg!=0)
-                                {
-                                    System.out.println("Please enter item codes of purchased items");
-                                    for (int i = 0; i < items_veg; i++) {
-                                        items_arr_veg[i] = in.nextInt();
-                                    }
-
-                                    System.out.println("Please enter quantity of purchased items");
-
-                                    for (int i = 0; i < items_veg; i++) {
-                                        items_arr_veg_quantity[i] = in.nextInt();
-                                    }
-                                }
-                                bill = bill + billVeg(list,items_veg,items_arr_veg,items_arr_veg_quantity);
-
-                                printItemListFruit(list);
-                                System.out.print("Please enter items purchased in this list : ");
-                                int items_fruits = in.nextInt();
-                                int[] items_arr_fruits = new int[items_fruits];
-                                int[] items_arr_fruits_quantity = new int[items_fruits];
-                                if(items_fruits!=0)
-                                {
-                                    System.out.println("Please enter item codes of purchased items");
-                                    for (int i = 0; i < items_fruits; i++) {
-                                        items_arr_fruits[i] = in.nextInt();
-                                    }
-
-                                    System.out.println("Please enter quantity of purchased items");
-                                    for (int i = 0; i < items_fruits; i++) {
-                                        items_arr_fruits_quantity[i] = in.nextInt();
-                                    }
-                                }
-                                bill = bill + billFruits(list,items_fruits,items_arr_fruits,items_arr_fruits_quantity);
-
-                                printBill_Details(operators,name_cust,mob_no_cust,usr1,pass1);
-                                printBill_Items(list,items_arr_others,items_arr_others_quantity,items_arr_grocery,items_arr_grocery_quantity,items_arr_veg,items_arr_veg_quantity,items_arr_fruits,items_arr_fruits_quantity);
-                                printBill_Total(bill);
-
-                                break Exit_Operator;
-
-                            }
-                            else
-                            {
-                                break Exit;
+                            } else {
+                                attempt_op--;
+                                System.out.println("Invalid Username or Password");
+                                System.out.println("Please re-enter Username and Password");
+                                System.out.println("Attempts remaining : " + attempt_op);
                             }
                         }
-                        else
-                        {
-                            attempt_op--;
-                            System.out.println("Invalid Username or Password");
-                            System.out.println("Please re-enter Username and Password");
-                            System.out.println("Attempts remaining : "+attempt_op);
-                        }
-                    }
-                    break Exit;
-                default:
-                    System.out.println("Exiting Super Market Billing System");
-                    break Exit;
+                        break Exit;
+                    default:
+                        System.out.println("Exiting Super Market Billing System");
+                        break EXIT_Main;
+                }
             }
         }
     }
